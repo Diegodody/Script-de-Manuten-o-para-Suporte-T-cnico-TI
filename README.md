@@ -36,8 +36,7 @@ O script oferece um menu interativo com **30 opções**, incluindo:
 - Verificação e reparo de imagem (DISM)  
 - Criação de ponto de restauração  
 - Relatório de erros do Windows  
-- Programas na inicialização  
-- Instruções para DPK/DMI  
+- Programas na inicialização   
 - Ativação do Windows  
 
 ---
