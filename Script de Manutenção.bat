@@ -145,13 +145,7 @@ cls & echo 📦 Listagem de dispositivos... & pnputil /enum-devices & pause & go
 cls & echo 📑 Relatório de eventos de segurança... & wevtutil query-events Security /format:Table > "C:\relatorio_erros.txt" & echo ✔ Relatório salvo em C:\relatorio_erros.txt & pause & goto menu
 
 :InstrucoesDPKDM
-cls & echo 📘 Consulte o suporte OEM para instalar DPK/DMI via BIOS ou software apropriado. 
-echo.
-echo 1.Baixe o arquivo no RMA Web ou solicite ao suporte Daten, XXXXXX-oa.zip, descompacte e execute o arquivo “scriptoa.bat” como administrador e pronto, Windows já estará ativado.
-echo.
-echo 2.Baixe o arquivo no RMA Web ou solicite ao suporte Daten, XXXXXX-dmi.zip, descompacte e execute o arquivo “scriptDMI.bat” como administrador e pronto, o número de série da placa mãe estará registrada na bios.
 
-echo.
 echo ** Nota: A localização dessa opção pode variar conforme o modelo do computador.
 pause
 goto menu
@@ -236,3 +230,4 @@ cls & echo 📶 Testando velocidade de Internet... & start "" https://www.speedt
 
 :Sair
 cls & echo 👋 Saindo do utilitário... & timeout /t 2 >nul & exit
+
