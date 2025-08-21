@@ -17,7 +17,7 @@ echo %SP%║ [02] Desfragmentação de Disco                 ║ [17] Teste de B
 echo %SP%║ [03] Verificação de Disco (CHKDSK)            ║ [18] Download de Drivers (Intel)               ║
 echo %SP%║ [04] Verificação de Arquivos SFC              ║ [19] Especificações de Hardware                ║
 echo %SP%║ [05] Limpeza de Arquivos Temporários          ║ [20] Relatório de Erros do Windows             ║
-echo %SP%║ [06] Windows Update / Drivers                 ║ [21] Instruções DPK / DMI                      ║
+echo %SP%║ [06] Windows Update / Drivers                 ║ [21] Limpeza Arquivos Prefetch                 ║
 echo %SP%║ [07] Verificar Status SMART do HD             ║ [22] Ativação do Windows 10/11                 ║
 echo %SP%║ [08] Informações do Sistema                   ║ [23] Criar Ponto de Restauração                ║
 echo %SP%║ [09] Teste de Velocidade da CPU               ║ [24] Limpeza Avançada de Disco                 ║
@@ -144,7 +144,14 @@ cls & echo 📦 Listagem de dispositivos... & pnputil /enum-devices & pause & go
 :RelatorioErros
 cls & echo 📑 Relatório de eventos de segurança... & wevtutil query-events Security /format:Table > "C:\relatorio_erros.txt" & echo ✔ Relatório salvo em C:\relatorio_erros.txt & pause & goto menu
 
-:InstrucoesDPKDM
+:LimpezaPrefetch
+cls
+echo 🧹 Limpando Prefetch...
+pause
+del /s /q C:\Windows\Prefetch\*.* >nul 2>&1
+echo ✔ Prefetch limpo com sucesso.
+pause
+goto menu
 
 echo ** Nota: A localização dessa opção pode variar conforme o modelo do computador.
 pause
@@ -230,4 +237,5 @@ cls & echo 📶 Testando velocidade de Internet... & start "" https://www.speedt
 
 :Sair
 cls & echo 👋 Saindo do utilitário... & timeout /t 2 >nul & exit
+
 
