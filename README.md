@@ -1,4 +1,4 @@
-# ⚙️ Diagnóstico e Manutenção do Windows
+#  Diagnóstico e Manutenção do Windows
 
 Este projeto é um **script em Batch (.bat)** que reúne em um único menu várias ferramentas úteis para **diagnóstico, manutenção e suporte técnico em Windows**.
 
